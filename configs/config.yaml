@@ -1,0 +1,3 @@
+server: localhost:11211
+window_size: 5s
+max_requests: 3
