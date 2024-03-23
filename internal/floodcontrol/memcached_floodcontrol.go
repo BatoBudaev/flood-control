@@ -27,10 +27,6 @@ func NewMemcachedFloodControl(config configs.Config) *MemcachedFloodControl {
 	return floodControl
 }
 
-func (m *MemcachedFloodControl) getItem(key string) (*memcache.Item, error) {
-	return m.client.Get(key)
-}
-
 func (m *MemcachedFloodControl) setItem(key string, count int64) (bool, error) {
 	item := &memcache.Item{
 		Key:        key,
