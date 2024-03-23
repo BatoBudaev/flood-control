@@ -19,7 +19,7 @@ type MemcachedFloodControl struct {
 func NewMemcachedFloodControl(config configs.Config) *MemcachedFloodControl {
 	floodControl := &MemcachedFloodControl{
 		client: memcache.New(config.Server),
-		N:      int64(config.WindowSize.Seconds()),
+		N:      int64(config.Interval.Seconds()),
 		K:      int64(config.MaxRequests),
 		mu:     sync.Mutex{},
 	}

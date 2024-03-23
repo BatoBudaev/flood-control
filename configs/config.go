@@ -8,7 +8,7 @@ import (
 
 type Config struct {
 	Server      string        `yaml:"server"`
-	WindowSize  time.Duration `yaml:"window_size"`
+	Interval    time.Duration `yaml:"interval"`
 	MaxRequests int           `yaml:"max_requests"`
 }
 
