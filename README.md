@@ -60,9 +60,7 @@ if count < m.K {
 В конфиге хранятся адрес сервера **Memcached**, интервал времени и максимальное число запросов.
 
 ````
-type Config struct {
-	Server      string        `yaml:"server"`
-	Interval    time.Duration `yaml:"interval"`
-	MaxRequests int           `yaml:"max_requests"`
-}
+server: localhost:11211
+interval: 5s
+max_requests: 3
 ````
